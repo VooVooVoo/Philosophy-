@@ -3,7 +3,7 @@ package it.morfoza;
 /**
  * Created by Wojt on 2016-08-08.
  */
-public class Plato extends PhilosopherBase {
+public class Plato extends PhilosopherBase implements Philosopher {
 
     public Plato() {
         name = "Aristotle";
@@ -39,6 +39,22 @@ public class Plato extends PhilosopherBase {
 
 
     }
+
+    @Override
+    public boolean isAlive() {
+        return false;
+    }
+
+    @Override
+    public boolean isDumbfounded() {
+        return false;
+    }
+
+    @Override
+    public boolean isWell() {
+        return false;
+    }
+
     public void attack1(Philosopher rival){
         rival.takeAttackBrain(brainPower);
     }
