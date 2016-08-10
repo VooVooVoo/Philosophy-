@@ -46,28 +46,15 @@ public class PhilosophyController {
         Philosopher rival;
 
 
-        if (philosopher1.equals("Aristotle")) {
-            philosopher = philosophers.get(0);
-        } else if (philosopher1.equals("Plato")) {
-            philosopher = philosophers.get(1);
-        } else if (philosopher1.equals("Socrates")) {
-            philosopher = philosophers.get(2);
-        } else {
-            throw new RuntimeException("No such philosopher: " + philosopher1);
-        }
+        philosopher = getPhilosopher(philosopher1);
         model.addAttribute("philosopher", philosopher);
 
-        if (philosopher2.equals("Aristotle")) {
-            rival = philosophers.get(0);
-        } else if (philosopher2.equals("Plato")) {
-            rival = philosophers.get(1);
-        } else if (philosopher2.equals("Socrates")) {
-            rival = philosophers.get(2);
-        } else if (philosopher2.equals(philosopher1)) {
+        if (philosopher2.equals(philosopher1)) {
             throw new RuntimeException("Cannot attack self!!!");
-        } else {
-            throw new RuntimeException("No such philosopher: " + philosopher2);
         }
+
+        rival = getPhilosopher(philosopher2);
+        model.addAttribute("rival", rival);
 
 
         if (attack.equals("philosophise")) {
@@ -82,7 +69,38 @@ public class PhilosophyController {
         } else {
             philosopher.attack5(rival);
         }
-        model.addAttribute("rival", rival);
+
+        if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && rival.equals("Plato")) {
+
+            return "afterAttack";
+
+        }
+        if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && rival.equals("Plato")) {
+
+            return "afterAttack";
+
+        }
+        if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && rival.equals("Plato")) {
+
+            return "afterAttack";
+
+        }
         return "afterAttack";
     }
+
+
+    private Philosopher getPhilosopher(@RequestParam(value = "philosopher1") String philosopher1) {
+        Philosopher philosopher;
+        if (philosopher1.equals("Aristotle")) {
+            philosopher = philosophers.get(0);
+        } else if (philosopher1.equals("Plato")) {
+            philosopher = philosophers.get(1);
+        } else if (philosopher1.equals("Socrates")) {
+            philosopher = philosophers.get(2);
+        } else {
+            throw new RuntimeException("No such philosopher: " + philosopher1);
+        }
+        return philosopher;
+    }
+
 }

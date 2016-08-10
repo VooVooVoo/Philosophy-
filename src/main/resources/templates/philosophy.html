@@ -1,23 +1,30 @@
 <html>
 <head>
     <style>
+
         body {
             background-color: #dddddd;
         }
         div {
             background-color: #cccccc;
         }
+        p {
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
+<p>
 <form action="/attack">
 
-
+Choose your philosopher!
     <select name="philosopher1">
         <option>Aristotle</option>
         <option>Plato</option>
         <option>Socrates</option>
     </select>
+    Choose the form of attack!
     <select name="attack">
         <option>philosophise</option>
         <option>rhetorical attack</option>
@@ -25,12 +32,14 @@
         <option>physical attack</option>
         <option>special</option>
     </select>
+    Choose your rival!
     <select name="philosopher2">
         <option>Aristotle</option>
         <option>Plato</option>
         <option>Socrates</option>
-        <input type="submit"/>
+        <input type="submit" value="Fight!!!"/>
     </select>
 </form>
+</p>
 </body>
 </html>
