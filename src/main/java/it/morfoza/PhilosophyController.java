@@ -72,149 +72,149 @@ public class PhilosophyController {
 
         if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && rival.equals("Plato")) {
 
-            return "afterAttack";
+            return "aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && rival.equals("Socrates")) {
 
-            return "afterAttack";
+            return "socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("philosophise") && rival.equals("Aristotle")) {
 
-            return "afterAttack";
+            return "aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("philosophise") && rival.equals("Socrates")) {
 
-            return "afterAttack";
+            return "socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("philosophise") && rival.equals("Aristotle")) {
 
-            return "afterAttack";
+            return "socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("philosophise") && rival.equals("Plato")) {
 
-            return "afterAttack";
+            return "socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("rhetorical attack") && rival.equals("Plato")) {
 
-            return "afterAttack";
+            return "aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("rhetorical attack") && rival.equals("Socrates")) {
 
-            return "afterAttack";
+            return "socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("rhetorical attack") && rival.equals("Aristotle")) {
 
-            return "afterAttack";
+            return "aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("rhetorical attack") && rival.equals("Socrates")) {
 
-            return "afterAttack";
+            return "socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("rhetorical attack") && rival.equals("Aristotle")) {
 
-            return "afterAttack";
+            return "socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("rhetorical attack") && rival.equals("Plato")) {
 
-            return "afterAttack";
+            return "socratesAttacksPlato";
 
         }if (philosopher1.equals("Aristotle") && attack.equals("ad personam") && rival.equals("Plato")) {
 
-            return "afterAttack";
+            return "aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("ad personam") && rival.equals("Socrates")) {
 
-            return "afterAttack";
+            return "socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("ad personam") && rival.equals("Aristotle")) {
 
-            return "afterAttack";
+            return "aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("ad personam") && rival.equals("Socrates")) {
 
-            return "afterAttack";
+            return "socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("ad personam") && rival.equals("Aristotle")) {
 
-            return "afterAttack";
+            return "socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("ad personam") && rival.equals("Plato")) {
 
-            return "afterAttack";
+            return "socratesAttacksPlato";
 
         }if (philosopher1.equals("Aristotle") && attack.equals("physical attack") && rival.equals("Plato")) {
 
-            return "afterAttack";
+            return "aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("physical attack") && rival.equals("Socrates")) {
 
-            return "afterAttack";
+            return "socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("physical attack") && rival.equals("Aristotle")) {
 
-            return "afterAttack";
+            return "aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("physical attack") && rival.equals("Socrates")) {
 
-            return "afterAttack";
+            return "socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("physical attack") && rival.equals("Aristotle")) {
 
-            return "afterAttack";
+            return "socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("physical attack") && rival.equals("Plato")) {
 
-            return "afterAttack";
+            return "socratesAttacksPlato";
 
         }if (philosopher1.equals("Aristotle") && attack.equals("special") && rival.equals("Plato")) {
 
-            return "afterAttack";
+            return "aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("special") && rival.equals("Socrates")) {
 
-            return "afterAttack";
+            return "socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("special") && rival.equals("Aristotle")) {
 
-            return "afterAttack";
+            return "aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("special") && rival.equals("Socrates")) {
 
-            return "afterAttack";
+            return "socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("physical attack") && rival.equals("Aristotle")) {
 
-            return "afterAttack";
+            return "socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("physical attack") && rival.equals("Plato")) {
 
-            return "afterAttack";
+            return "socratesAttacksPlato";
 
         }
         return "afterAttack";
