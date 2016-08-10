@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>second html</title>
+    <style>
+        body {
+            background-color: #dddddd;
+        }
+        div {
+            background-color: #cccccc;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<p th:text=" ${philosopher} + ' used his ' + ${attack} + '.'"/>
+<p th:text="'It left his rival in the following condition ' + ${rival} "/>
+<p>Do you want to attack again?</p>
+<p> <a href='/'> Attack!!!</a> </p>
+</body>
+</html>

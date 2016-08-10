@@ -37,6 +37,7 @@ public class Aristotle extends PhilosopherBase implements Philosopher{
 
     public void takeAttackMuscle(long musclePower) {
         health -= musclePower;
+        this.musclePower -= musclePower/10;
 
 
     }
@@ -67,6 +68,13 @@ public class Aristotle extends PhilosopherBase implements Philosopher{
     }
     public void attack4(Philosopher rival){
         rival.takeAttackMuscle(musclePower);
+    }
+    public void attack5(Philosopher rival){
+        System.out.println(name + " attacks " + rival + " with his special power of Aristotelian Logic!!!");
+        rival.takeAttackConceit(conceit);
+        rival.takeAttackRheto(rhetorics);
+        rival.takeAttackBrain(brainPower);
+        rival.isDumbfounded();
     }
 
 

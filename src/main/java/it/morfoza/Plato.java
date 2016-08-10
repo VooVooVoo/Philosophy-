@@ -6,7 +6,7 @@ package it.morfoza;
 public class Plato extends PhilosopherBase implements Philosopher {
 
     public Plato() {
-        name = "Aristotle";
+        name = "Plato";
         health = 1000;
         brainPower = 100;
         rhetorics = 100;
@@ -36,6 +36,8 @@ public class Plato extends PhilosopherBase implements Philosopher {
 
     public void takeAttackMuscle(long musclePower) {
         health -= musclePower;
+        this.musclePower -= musclePower/10;
+
 
 
     }
