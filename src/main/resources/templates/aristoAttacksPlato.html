@@ -16,8 +16,9 @@
     </style>
 </head>
 <body>
-<p th:text=" ${philosopher} + ' used his ' + ${attack} + '.'"/>
-<p th:text="'It left his rival in the following condition ' + ${rival} "/>
+<p th:text=" ${philosopher} + ' tried to ' + ${attack} + ' his rival.'"/>
+<p> <a href='http://www.diffen.com/difference/Aristotle_vs_Plato'> Check out the differences between them!</a> </p>
+<p th:text="'This attack lowered his stats ' + ${rival} "/>
 <p>Do you want to attack again?</p>
 <p> <a href='/'> Attack!!!</a> </p>
 </body>
