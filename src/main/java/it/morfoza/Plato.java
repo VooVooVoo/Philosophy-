@@ -69,4 +69,9 @@ public class Plato extends PhilosopherBase implements Philosopher {
     public void attack4(Philosopher rival){
         rival.takeAttackMuscle(musclePower);
     }
+
+    @Override
+    public void attack5(Philosopher rival) {
+
+    }
 }
