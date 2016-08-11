@@ -1,5 +1,8 @@
 package it.morfoza;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Wojt on 2016-08-08.
  */

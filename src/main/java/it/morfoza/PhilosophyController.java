@@ -45,7 +45,6 @@ public class PhilosophyController {
         Philosopher philosopher;
         Philosopher rival;
 
-
         philosopher = getPhilosopher(philosopher1);
         model.addAttribute("philosopher", philosopher);
 
@@ -70,154 +69,154 @@ public class PhilosophyController {
             philosopher.attack5(rival);
         }
 
-        if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && rival.equals("Plato")) {
+        if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && philosopher2.equals("Plato")) {
 
             return "aristoAttacksPlato";
 
         }
-        if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && rival.equals("Socrates")) {
+        if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && philosopher2.equals("Socrates")) {
 
             return "socratesAttacksAristotle";
 
         }
-        if (philosopher1.equals("Plato") && attack.equals("philosophise") && rival.equals("Aristotle")) {
+        if (philosopher1.equals("Plato") && attack.equals("philosophise") && philosopher2.equals("Aristotle")) {
 
             return "aristoAttacksPlato";
 
         }
-        if (philosopher1.equals("Plato") && attack.equals("philosophise") && rival.equals("Socrates")) {
+        if (philosopher1.equals("Plato") && attack.equals("philosophise") && philosopher2.equals("Socrates")) {
 
             return "socratesAttacksPlato";
 
         }
-        if (philosopher1.equals("Socrates") && attack.equals("philosophise") && rival.equals("Aristotle")) {
+        if (philosopher1.equals("Socrates") && attack.equals("philosophise") && philosopher2.equals("Aristotle")) {
 
             return "socratesAttacksAristotle";
 
         }
-        if (philosopher1.equals("Socrates") && attack.equals("philosophise") && rival.equals("Plato")) {
+        if (philosopher1.equals("Socrates") && attack.equals("philosophise") && philosopher2.equals("Plato")) {
 
             return "socratesAttacksPlato";
 
         }
-        if (philosopher1.equals("Aristotle") && attack.equals("rhetorical attack") && rival.equals("Plato")) {
+        if (philosopher1.equals("Aristotle") && attack.equals("rhetorical attack") && philosopher2.equals("Plato")) {
 
             return "aristoAttacksPlato";
 
         }
-        if (philosopher1.equals("Aristotle") && attack.equals("rhetorical attack") && rival.equals("Socrates")) {
+        if (philosopher1.equals("Aristotle") && attack.equals("rhetorical attack") && philosopher2.equals("Socrates")) {
 
             return "socratesAttacksAristotle";
 
         }
-        if (philosopher1.equals("Plato") && attack.equals("rhetorical attack") && rival.equals("Aristotle")) {
+        if (philosopher1.equals("Plato") && attack.equals("rhetorical attack") && philosopher2.equals("Aristotle")) {
 
             return "aristoAttacksPlato";
 
         }
-        if (philosopher1.equals("Plato") && attack.equals("rhetorical attack") && rival.equals("Socrates")) {
+        if (philosopher1.equals("Plato") && attack.equals("rhetorical attack") && philosopher2.equals("Socrates")) {
 
             return "socratesAttacksPlato";
 
         }
-        if (philosopher1.equals("Socrates") && attack.equals("rhetorical attack") && rival.equals("Aristotle")) {
+        if (philosopher1.equals("Socrates") && attack.equals("rhetorical attack") && philosopher2.equals("Aristotle")) {
 
             return "socratesAttacksAristotle";
 
         }
-        if (philosopher1.equals("Socrates") && attack.equals("rhetorical attack") && rival.equals("Plato")) {
+        if (philosopher1.equals("Socrates") && attack.equals("rhetorical attack") && philosopher2.equals("Plato")) {
 
             return "socratesAttacksPlato";
 
-        }if (philosopher1.equals("Aristotle") && attack.equals("ad personam") && rival.equals("Plato")) {
+        }if (philosopher1.equals("Aristotle") && attack.equals("ad personam") && philosopher2.equals("Plato")) {
 
             return "aristoAttacksPlato";
 
         }
-        if (philosopher1.equals("Aristotle") && attack.equals("ad personam") && rival.equals("Socrates")) {
+        if (philosopher1.equals("Aristotle") && attack.equals("ad personam") && philosopher2.equals("Socrates")) {
 
             return "socratesAttacksAristotle";
 
         }
-        if (philosopher1.equals("Plato") && attack.equals("ad personam") && rival.equals("Aristotle")) {
+        if (philosopher1.equals("Plato") && attack.equals("ad personam") && philosopher2.equals("Aristotle")) {
 
             return "aristoAttacksPlato";
 
         }
-        if (philosopher1.equals("Plato") && attack.equals("ad personam") && rival.equals("Socrates")) {
+        if (philosopher1.equals("Plato") && attack.equals("ad personam") && philosopher2.equals("Socrates")) {
 
             return "socratesAttacksPlato";
 
         }
-        if (philosopher1.equals("Socrates") && attack.equals("ad personam") && rival.equals("Aristotle")) {
+        if (philosopher1.equals("Socrates") && attack.equals("ad personam") && philosopher2.equals("Aristotle")) {
 
             return "socratesAttacksAristotle";
 
         }
-        if (philosopher1.equals("Socrates") && attack.equals("ad personam") && rival.equals("Plato")) {
+        if (philosopher1.equals("Socrates") && attack.equals("ad personam") && philosopher2.equals("Plato")) {
 
             return "socratesAttacksPlato";
 
-        }if (philosopher1.equals("Aristotle") && attack.equals("physical attack") && rival.equals("Plato")) {
+        }if (philosopher1.equals("Aristotle") && attack.equals("physical attack") && philosopher2.equals("Plato")) {
 
             return "aristoAttacksPlato";
 
         }
-        if (philosopher1.equals("Aristotle") && attack.equals("physical attack") && rival.equals("Socrates")) {
+        if (philosopher1.equals("Aristotle") && attack.equals("physical attack") && philosopher2.equals("Socrates")) {
 
             return "socratesAttacksAristotle";
 
         }
-        if (philosopher1.equals("Plato") && attack.equals("physical attack") && rival.equals("Aristotle")) {
+        if (philosopher1.equals("Plato") && attack.equals("physical attack") && philosopher2.equals("Aristotle")) {
 
             return "aristoAttacksPlato";
 
         }
-        if (philosopher1.equals("Plato") && attack.equals("physical attack") && rival.equals("Socrates")) {
+        if (philosopher1.equals("Plato") && attack.equals("physical attack") && philosopher2.equals("Socrates")) {
 
             return "socratesAttacksPlato";
 
         }
-        if (philosopher1.equals("Socrates") && attack.equals("physical attack") && rival.equals("Aristotle")) {
+        if (philosopher1.equals("Socrates") && attack.equals("physical attack") && philosopher2.equals("Aristotle")) {
 
             return "socratesAttacksAristotle";
 
         }
-        if (philosopher1.equals("Socrates") && attack.equals("physical attack") && rival.equals("Plato")) {
+        if (philosopher1.equals("Socrates") && attack.equals("physical attack") && philosopher2.equals("Plato")) {
 
             return "socratesAttacksPlato";
 
-        }if (philosopher1.equals("Aristotle") && attack.equals("special") && rival.equals("Plato")) {
+        }if (philosopher1.equals("Aristotle") && attack.equals("special") && philosopher2.equals("Plato")) {
 
             return "aristoAttacksPlato";
 
         }
-        if (philosopher1.equals("Aristotle") && attack.equals("special") && rival.equals("Socrates")) {
+        if (philosopher1.equals("Aristotle") && attack.equals("special") && philosopher2.equals("Socrates")) {
 
             return "socratesAttacksAristotle";
 
         }
-        if (philosopher1.equals("Plato") && attack.equals("special") && rival.equals("Aristotle")) {
+        if (philosopher1.equals("Plato") && attack.equals("special") && philosopher2.equals("Aristotle")) {
 
             return "aristoAttacksPlato";
 
         }
-        if (philosopher1.equals("Plato") && attack.equals("special") && rival.equals("Socrates")) {
+        if (philosopher1.equals("Plato") && attack.equals("special") && philosopher2.equals("Socrates")) {
 
             return "socratesAttacksPlato";
 
         }
-        if (philosopher1.equals("Socrates") && attack.equals("physical attack") && rival.equals("Aristotle")) {
+        if (philosopher1.equals("Socrates") && attack.equals("physical attack") && philosopher2.equals("Aristotle")) {
 
             return "socratesAttacksAristotle";
 
         }
-        if (philosopher1.equals("Socrates") && attack.equals("physical attack") && rival.equals("Plato")) {
+        if (philosopher1.equals("Socrates") && attack.equals("physical attack") && philosopher2.equals("Plato")) {
 
             return "socratesAttacksPlato";
 
         }
-        return "afterAttack";
+        return "socratesAttacksPlato";
     }
 
 
