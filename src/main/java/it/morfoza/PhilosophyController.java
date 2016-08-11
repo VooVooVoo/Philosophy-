@@ -4,6 +4,7 @@ package it.morfoza;
  * Created by Wojt on 2016-08-10.
  */
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,15 +17,11 @@ import java.util.List;
 @Controller
 public class PhilosophyController {
 
+    private PhilosopherRepository philosopherRepository;
 
-    private List<Philosopher> philosophers = new ArrayList<>();
-
-    // Konstruktor, który zostanie wywołany gdy wywołana zostanie klasa PhilosophyController
-    //Konstruktor doda mi do listy te obiekty
-    public PhilosophyController() {
-        philosophers.add(new Aristotle());
-        philosophers.add(new Plato());
-        philosophers.add(new Socrates());
+    @Autowired
+    public PhilosophyController(PhilosopherRepository philosopherRepository) {
+        this.philosopherRepository = philosopherRepository;
     }
 
     @RequestMapping("/")
@@ -220,18 +217,8 @@ public class PhilosophyController {
     }
 
 
-    private Philosopher getPhilosopher(@RequestParam(value = "philosopher1") String philosopher1) {
-        Philosopher philosopher;
-        if (philosopher1.equals("Aristotle")) {
-            philosopher = philosophers.get(0);
-        } else if (philosopher1.equals("Plato")) {
-            philosopher = philosophers.get(1);
-        } else if (philosopher1.equals("Socrates")) {
-            philosopher = philosophers.get(2);
-        } else {
-            throw new RuntimeException("No such philosopher: " + philosopher1);
-        }
-        return philosopher;
+    private Philosopher getPhilosopher(String philosopher) {
+        return philosopherRepository.getByName(philosopher);
     }
 
 }
