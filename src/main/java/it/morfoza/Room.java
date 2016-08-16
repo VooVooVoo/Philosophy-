@@ -5,45 +5,61 @@ package it.morfoza;
  */
 public class Room {
 
-    static int[][] myRoom = new int [5][5];
+    Player[][] myRoom = new Player[5][5];
     Player player = new Player();
     Room room1 = new Room();
-    int x = 5;
-    int y = 5;
     int playerCoordinateX;
     int playerCoordinateY;
-
     public static void main(String[] args) {
 
 
-        myRoom[2][4]= 1;
+        int playerCoordinateX = 2;
+        int playerCoordinateY = 4;
+
+
 
     }
 
 
+    public PlayerPosition getPlayerPosition() {
 
-    public int getPlayerPosition(){
-        return myRoom[playerCoordinateX][playerCoordinateY];
+        Player[][] myRoom2 = new Player[3][5];
+        PlayerPosition playerPosition = new PlayerPosition(playerCoordinateX, playerCoordinateY);
+        int x = -1;
+        int y = -1;
+        for (int i = 0; i < myRoom2[i].length; i++) {
+            for (int j = 0; j < myRoom2[j].length; j++) {
+                if (myRoom2[i][j] != null) {
+                    x = i;
+                    y = j;
+                }
+            }
+        }
+        return new PlayerPosition(x, y);
+
     }
 
-    public void goLeft(){
-        if(x>0){
-            x-=1;
+    public void goLeft() {
+        if (playerCoordinateX > 0) {
+            playerCoordinateX -= 1;
         }
     }
-    public void goRight(){
-        if(x<4){
-            x+=1;
+
+    public void goRight() {
+        if (playerCoordinateX < 4) {
+            playerCoordinateX += 1;
         }
     }
-    public void goDown(){
-        if(y<4){
-            y+=1;
+
+    public void goDown() {
+        if (playerCoordinateY < 4) {
+            playerCoordinateY += 1;
         }
     }
-    public void goUp(){
-        if(y>0){
-            y-=1;
+
+    public void goUp() {
+        if (playerCoordinateY > 0) {
+            playerCoordinateY -= 1;
         }
     }
 
