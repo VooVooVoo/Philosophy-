@@ -1,9 +1,22 @@
 package it.morfoza;
 
+import java.util.List;
+
 /**
  * Created by Wojt on 2016-08-16.
  */
 public class Mover {
+    Player player = new Player();
+    Room room1 = new Room();
+    int x;
+    int y;
+
+    public static void main(String[] args) {
+
+
+    }
+
+
     public void goLeft(){
         if(x>0){
             x-=1;
