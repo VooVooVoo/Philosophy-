@@ -5,8 +5,7 @@ package it.morfoza;
  */
 public class Player implements Philosopher {
 
-    int playerCoordinateX;
-    int playerCoordinateY;
+
 
     @Override
     public void attack1(Philosopher rival) {
