@@ -5,8 +5,6 @@ package it.morfoza;
  */
 public class Player implements Philosopher {
 
-    int playerCoordinateX;
-    int playerCoordinateY;
 
 
     @Override
@@ -69,29 +67,5 @@ public class Player implements Philosopher {
         return false;
     }
 
-    public int goLeft() {
-        if (playerCoordinateX > 0) {
-            return playerCoordinateX -= 1;
-        }
-        return playerCoordinateX;
-    }
 
-    public int goRight() {
-        if (playerCoordinateX < 4) {
-            return playerCoordinateX += 1;
-        }
-        return playerCoordinateX;
-    }
-
-    public void goDown() {
-        if (playerCoordinateY < 4) {
-            playerCoordinateY += 1;
-        }
-    }
-
-    public void goUp() {
-        if (playerCoordinateY > 0) {
-            playerCoordinateY -= 1;
-        }
-    }
 }

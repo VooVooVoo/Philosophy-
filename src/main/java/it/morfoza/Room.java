@@ -11,14 +11,15 @@ public class Room {
     int playerCoordinateY;
 
     public static void main(String[] args) {
-
+        Player[][] myRoom2 = new Player[5][5];
         Player player = new Player();
         Room room = new Room();
-        PlayerPosition playerPosition = new PlayerPosition(2, 4);
+        PlayerPosition playerPosition = room.getPlayerPosition();
+
 
         room.getPlayerPosition();
         System.out.println(playerPosition);
-        player.goLeft();
+        room.goLeft();
         System.out.println(playerPosition);
 
     }
@@ -26,8 +27,8 @@ public class Room {
 
     public PlayerPosition getPlayerPosition() {
 
-        Player[][] myRoom2 = new Player[5][5];
-        PlayerPosition playerPosition = new PlayerPosition(playerCoordinateX, playerCoordinateY);
+
+       PlayerPosition playerPosition = new PlayerPosition(playerCoordinateX, playerCoordinateY);
         int x = -1;
         int y = -1;
         for (int i = 0; i < myRoom2[i].length; i++) {
@@ -42,6 +43,31 @@ public class Room {
 
     }
 
+    public int goLeft() {
+        if (playerCoordinateX > 0) {
+            return playerCoordinateX -= 1;
+        }
+        return playerCoordinateX;
+    }
+
+    public int goRight() {
+        if (playerCoordinateX < 4) {
+            return playerCoordinateX += 1;
+        }
+        return playerCoordinateX;
+    }
+
+    public void goDown() {
+        if (playerCoordinateY < 4) {
+            playerCoordinateY += 1;
+        }
+    }
+
+    public void goUp() {
+        if (playerCoordinateY > 0) {
+            playerCoordinateY -= 1;
+        }
+    }
 }
 
 
