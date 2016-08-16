@@ -13,9 +13,9 @@ public class Room {
     public static void main(String[] args) {
 
 
-        int playerCoordinateX = 2;
-        int playerCoordinateY = 4;
-
+        PlayerPosition playerPosition = new PlayerPosition(2, 4);
+Player player= new Player();
+        playerPosition
 
 
     }
@@ -23,7 +23,7 @@ public class Room {
 
     public PlayerPosition getPlayerPosition() {
 
-        Player[][] myRoom2 = new Player[3][5];
+        Player[][] myRoom2 = new Player[5][5];
         PlayerPosition playerPosition = new PlayerPosition(playerCoordinateX, playerCoordinateY);
         int x = -1;
         int y = -1;
