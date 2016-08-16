@@ -5,19 +5,17 @@ package it.morfoza;
  */
 public class Room {
 
-    Player[][] myRoom = new Player[5][5];
+    Player[][] myRoom2 = new Player[5][5];
     Player player = new Player();
-    Room room1 = new Room();
     int playerCoordinateX;
     int playerCoordinateY;
+
     public static void main(String[] args) {
 
-
-        PlayerPosition playerPosition = new PlayerPosition(2, 4);
-Player player= new Player();
-        playerPosition
-
-
+//        Room room = new Room();
+//        PlayerPosition playerPosition = new PlayerPosition(2, 4);
+//        room.getPlayerPosition();
+//        System.out.println(playerPosition);
     }
 
 
@@ -39,31 +37,8 @@ Player player= new Player();
 
     }
 
-    public void goLeft() {
-        if (playerCoordinateX > 0) {
-            playerCoordinateX -= 1;
-        }
-    }
-
-    public void goRight() {
-        if (playerCoordinateX < 4) {
-            playerCoordinateX += 1;
-        }
-    }
-
-    public void goDown() {
-        if (playerCoordinateY < 4) {
-            playerCoordinateY += 1;
-        }
-    }
-
-    public void goUp() {
-        if (playerCoordinateY > 0) {
-            playerCoordinateY -= 1;
-        }
-    }
-
 }
+
 
 
 
