@@ -12,10 +12,15 @@ public class Room {
 
     public static void main(String[] args) {
 
-//        Room room = new Room();
-//        PlayerPosition playerPosition = new PlayerPosition(2, 4);
-//        room.getPlayerPosition();
-//        System.out.println(playerPosition);
+        Player player = new Player();
+        Room room = new Room();
+        PlayerPosition playerPosition = new PlayerPosition(2, 4);
+
+        room.getPlayerPosition();
+        System.out.println(playerPosition);
+        player.goLeft();
+        System.out.println(playerPosition);
+
     }
 
 
