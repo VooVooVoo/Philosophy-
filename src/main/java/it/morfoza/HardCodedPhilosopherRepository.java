@@ -1,11 +1,14 @@
 package it.morfoza;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Wojt on 2016-08-12.
  */
+@Component
 public class HardCodedPhilosopherRepository implements PhilosopherRepository {
     private List<Philosopher> philosophers = new ArrayList<>();
 

@@ -18,6 +18,7 @@ import java.util.List;
 public class PhilosophyController {
 
     private PhilosopherRepository philosopherRepository;
+    private Room room = new Room();
 
     @Autowired
     public PhilosophyController(PhilosopherRepository philosopherRepository) {
@@ -29,6 +30,13 @@ public class PhilosophyController {
         return "philosophy";
     }
 
+
+    @RequestMapping("/map")
+    public String map(Model model)
+    {
+        model.addAttribute("map", room.getMap());
+        return "Mapa";
+    }
 
     @RequestMapping("/attack")
     public String fight(@RequestParam(value = "philosopher1") String philosopher1,
