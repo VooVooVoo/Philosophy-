@@ -33,11 +33,7 @@ public class PhilosophyController {
         model.addAttribute("map", room.getMap());
         return "Mapa";
     }
-//    @RequestMapping("/fight")
-//    public String fight(Model model){
-//        model.addAttribute("fightRoom", room.fightRoom());
-//        return ""
-//    }
+
 
     @RequestMapping("/goRight")
     public String goRight(Model model) {
