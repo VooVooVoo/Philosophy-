@@ -5,24 +5,17 @@ package it.morfoza;
  */
 public class Room {
 
-    int playerCoordinateX = 2;
-    int playerCoordinateY = 4;
+    int playerCoordinateX;
+    int playerCoordinateY;
     int monsterCoordinateX = (int) (Math.random() * 10) / 2;
     int monsterCoordinateY = (int) (Math.random() * 10) / 2;
+
 
 //    List<PhysicalObjectInRoom> thingsInRoom;
 
     public static void main(String[] args) {
         Room room = new Room();
 
-
-        PlayerPosition playerPosition = room.getPlayerPosition();
-        ObjectPosition objectPosition = room.getObjectPosition();
-
-
-        System.out.println(playerPosition);
-        room.goLeft();
-        System.out.println(playerPosition);
 
     }
 
@@ -65,6 +58,11 @@ public class Room {
         }
         return playerCoordinateY;
     }
+//    public void fightRoom(){
+//        if (playerCoordinateX==monsterCoordinateX&&playerCoordinateY==monsterCoordinateY){
+//
+//        }
+    }
 
     public String[][] getMap() {
         String[][] map = new String[5][5];
@@ -78,15 +76,16 @@ public class Room {
                 } else if
                         (monsterCoordinateX == j && monsterCoordinateY == i) {
                     mapRow[j] = "M";
-                } else if (playerCoordinateX == monsterCoordinateX && playerCoordinateY == monsterCoordinateY) {
-                    map[i][j] = "F";
-                } else {
+                }  else {
                     mapRow[j] = "O";
                 }
             }
 
         }
-
+if
+                (monsterCoordinateX == playerCoordinateX && monsterCoordinateY == playerCoordinateY) {
+            map[playerCoordinateX][playerCoordinateY] = "F";
+        }
         return map;
     }
 }

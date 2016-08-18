@@ -10,9 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
-import java.util.List;
-
 
 @Controller
 public class PhilosophyController {
@@ -36,6 +33,11 @@ public class PhilosophyController {
         model.addAttribute("map", room.getMap());
         return "Mapa";
     }
+//    @RequestMapping("/fight")
+//    public String fight(Model model){
+//        model.addAttribute("fightRoom", room.fightRoom());
+//        return ""
+//    }
 
     @RequestMapping("/goRight")
     public String goRight(Model model) {
