@@ -32,10 +32,33 @@ public class PhilosophyController {
 
 
     @RequestMapping("/map")
-    public String map(Model model)
-    {
+    public String map(Model model) {
         model.addAttribute("map", room.getMap());
         return "Mapa";
+    }
+
+    @RequestMapping("/goRight")
+    public String goRight(Model model) {
+        model.addAttribute("map", room.goRight());
+        return "redirect:/map";
+    }
+
+    @RequestMapping("/goLeft")
+    public String goLeft(Model model) {
+        model.addAttribute("map", room.goLeft());
+        return "redirect:/map";
+    }
+
+    @RequestMapping("/goUp")
+    public String goUp(Model model) {
+        model.addAttribute("map", room.goUp());
+        return "redirect:/map";
+    }
+
+    @RequestMapping("/goDown")
+    public String goDown(Model model) {
+        model.addAttribute("map", room.goDown());
+        return "redirect:/map";
     }
 
     @RequestMapping("/attack")
@@ -133,7 +156,8 @@ public class PhilosophyController {
 
             return "socratesAttacksPlato";
 
-        }if (philosopher1.equals("Aristotle") && attack.equals("ad personam") && philosopher2.equals("Plato")) {
+        }
+        if (philosopher1.equals("Aristotle") && attack.equals("ad personam") && philosopher2.equals("Plato")) {
 
             return "aristoAttacksPlato";
 
@@ -162,7 +186,8 @@ public class PhilosophyController {
 
             return "socratesAttacksPlato";
 
-        }if (philosopher1.equals("Aristotle") && attack.equals("physical attack") && philosopher2.equals("Plato")) {
+        }
+        if (philosopher1.equals("Aristotle") && attack.equals("physical attack") && philosopher2.equals("Plato")) {
 
             return "aristoAttacksPlato";
 
@@ -191,7 +216,8 @@ public class PhilosophyController {
 
             return "socratesAttacksPlato";
 
-        }if (philosopher1.equals("Aristotle") && attack.equals("special") && philosopher2.equals("Plato")) {
+        }
+        if (philosopher1.equals("Aristotle") && attack.equals("special") && philosopher2.equals("Plato")) {
 
             return "aristoAttacksPlato";
 

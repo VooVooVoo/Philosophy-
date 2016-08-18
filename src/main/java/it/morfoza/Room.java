@@ -1,5 +1,8 @@
 package it.morfoza;
 
+import java.nio.file.attribute.PosixFileAttributes;
+import java.util.List;
+
 /**
  * Created by Wojt on 2016-08-15.
  */
@@ -7,6 +10,10 @@ public class Room {
 
     int playerCoordinateX;
     int playerCoordinateY;
+    int objectCoordinateX;
+    int objectCoordinateY;
+
+//    List<PhysicalObjectInRoom> thingsInRoom;
 
     public static void main(String[] args) {
         Room room = new Room();
@@ -26,6 +33,10 @@ public class Room {
         return new PlayerPosition(playerCoordinateX, playerCoordinateY);
 
     }
+    public ObjectPosition getObjectPosition(){
+        return new ObjectPosition(objectCoordinateX, objectCoordinateY);
+
+    }
 
 
 
@@ -43,16 +54,18 @@ public class Room {
         return playerCoordinateX;
     }
 
-    public void goDown() {
+    public int goDown() {
         if (playerCoordinateY < 4) {
             playerCoordinateY += 1;
         }
+        return playerCoordinateY;
     }
 
-    public void goUp() {
+    public int goUp() {
         if (playerCoordinateY > 0) {
             playerCoordinateY -= 1;
         }
+        return playerCoordinateY;
     }
 
    public String[][] getMap() {
@@ -63,10 +76,10 @@ public class Room {
 
             String[] mapRow = map[i];
             for(int j=0;j<mapRow.length;j++){
-                if(playerCoordinateX == i && playerCoordinateY == j) {
-                    mapRow[j] = "X";
+                if(playerCoordinateX == j && playerCoordinateY == i) {
+                    mapRow[j] = "@";
                 } else {
-                    mapRow[j]="?";
+                    mapRow[j]="O";
                 }
             }
 

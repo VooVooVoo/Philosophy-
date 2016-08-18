@@ -14,11 +14,20 @@
 <table>
     <tr th:each="mapRow : ${map}">
         <td th:each ="cell : ${mapRow}"  >
-          <p th:text="${cell}"/>
+
+
+            <div th:switch="${cell}">
+                <p th:case="'@'"> <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR2NqnHjLygBvDWc-_lGESBS-hQOMAmIZRg-5KlUG80WKwvSRo-ZQ" width="50" height="50" /> </p>
+                <p th:case="'O'"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnG7JNUUJeMwSiCWD788F6u6dX8TkC_yfJQrRTz2aYrUE3QCtH" width="50" height="50" /></p>
+                <p th:case="*">Gabu???</p>
+            </div>
         </td>
     </tr>
 </table>
     </div>
-
+<p> <a href='goRight'> Go right. </a> </p>
+<p> <a href='goLeft'> Go left. </a> </p>
+<p> <a href='goUp'> Go up. </a> </p>
+<p> <a href='goDown'> Go down. </a> </p>
 </body>
 </html>
