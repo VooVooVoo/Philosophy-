@@ -8,10 +8,10 @@ import java.util.List;
  */
 public class Room {
 
-    int playerCoordinateX;
-    int playerCoordinateY;
-    int objectCoordinateX;
-    int objectCoordinateY;
+    int playerCoordinateX = 2;
+    int playerCoordinateY = 4;
+    int objectCoordinateX = (int) (Math.random() * 10)/2;
+    int objectCoordinateY = (int) (Math.random() * 10)/2;
 
 //    List<PhysicalObjectInRoom> thingsInRoom;
 
@@ -20,6 +20,7 @@ public class Room {
 
 
         PlayerPosition playerPosition = room.getPlayerPosition();
+        ObjectPosition objectPosition = room.getObjectPosition();
 
 
         System.out.println(playerPosition);
@@ -29,15 +30,15 @@ public class Room {
     }
 
 
-    public PlayerPosition getPlayerPosition(){
+    public PlayerPosition getPlayerPosition() {
         return new PlayerPosition(playerCoordinateX, playerCoordinateY);
 
     }
-    public ObjectPosition getObjectPosition(){
+
+    public ObjectPosition getObjectPosition() {
         return new ObjectPosition(objectCoordinateX, objectCoordinateY);
 
     }
-
 
 
     public int goLeft() {
@@ -68,18 +69,20 @@ public class Room {
         return playerCoordinateY;
     }
 
-   public String[][] getMap() {
+    public String[][] getMap() {
         String[][] map = new String[5][5];
 
-        for(int i=0;i<map.length;i++){
 
-
+        for (int i = 0; i < map.length; i++) {
             String[] mapRow = map[i];
-            for(int j=0;j<mapRow.length;j++){
-                if(playerCoordinateX == j && playerCoordinateY == i) {
+            for (int j = 0; j < mapRow.length; j++) {
+                if (playerCoordinateX == j && playerCoordinateY == i) {
                     mapRow[j] = "@";
+                } else if
+                        (objectCoordinateX == j && objectCoordinateY == i) {
+                    mapRow[j] = "M";
                 } else {
-                    mapRow[j]="O";
+                    mapRow[j] = "O";
                 }
             }
 
