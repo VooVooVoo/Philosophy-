@@ -22,7 +22,7 @@ public class PhilosophyController {
         this.philosopherRepository = philosopherRepository;
     }
 
-    @RequestMapping("/")
+    @RequestMapping("/fight")
     public String selector() {
         return "philosophy";
     }

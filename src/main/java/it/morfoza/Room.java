@@ -87,7 +87,7 @@ public class Room {
         }
         if
                 (monsterCoordinateX == playerCoordinateX && monsterCoordinateY == playerCoordinateY) {
-            map[playerCoordinateX][playerCoordinateY] = "F";
+            map[playerCoordinateY][playerCoordinateX] = "F";
         }
         return map;
     }
