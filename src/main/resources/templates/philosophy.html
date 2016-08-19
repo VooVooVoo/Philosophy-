@@ -37,13 +37,22 @@
         <option>special</option>
     </select>
 
-    <script>
+    <select name="philosopher2" id="philosopher2" style="display:none;">
+        <option value="Plato">Plato</option>
+        <option value="Aristotle">Aristotle</option>
+        <option value="Socrates">Socrates</option>
+        <!--<option value="Descartes">Descartes</option>-->
+        <!--<option value="Spinoza">Spinoza</option>-->
+    </select>
+    <script type="text/javascript">
         function myFunction() {
-            var x = Math.floor((Math.random() * 10) + 1) / 2;
-            document.getElementById("philosopher2").innerHTML = x;
+            var select = document.getElementById('philosopher2');
+            var items = select.getElementsByTagName('option');
+            var index = Math.floor(Math.random() * items.length);
+
+            select.selectedIndex = index;
         }
     </script>
-
     <input type="submit" value="Fight!!!" onclick="myFunction()"/>
 
 </form>
