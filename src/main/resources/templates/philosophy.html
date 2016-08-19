@@ -5,9 +5,11 @@
         body {
             background-color: #dddddd;
         }
+
         div {
             background-color: #cccccc;
         }
+
         p {
             text-align: center;
         }
@@ -18,11 +20,13 @@
 <p>
 <form action="/attack">
 
-Choose your philosopher!
+    Choose your philosopher!
     <select name="philosopher1">
         <option>Aristotle</option>
         <option>Plato</option>
         <option>Socrates</option>
+        <option>Spinoza</option>
+        <option>Descartes</option>
     </select>
     Choose the form of attack!
     <select name="attack">
@@ -32,13 +36,16 @@ Choose your philosopher!
         <option>physical attack</option>
         <option>special</option>
     </select>
-    Choose your rival!
-    <select name="philosopher2">
-        <option>Aristotle</option>
-        <option>Plato</option>
-        <option>Socrates</option>
-        <input type="submit" value="Fight!!!"/>
-    </select>
+
+    <script>
+        function myFunction() {
+            var x = Math.floor((Math.random() * 10) + 1) / 2;
+            document.getElementById("philosopher2").innerHTML = x;
+        }
+    </script>
+
+    <input type="submit" value="Fight!!!" onclick="myFunction()"/>
+
 </form>
 </p>
 </body>

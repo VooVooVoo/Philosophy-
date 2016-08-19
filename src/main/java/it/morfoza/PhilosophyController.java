@@ -74,9 +74,6 @@ public class PhilosophyController {
         philosopher = getPhilosopher(philosopher1);
         model.addAttribute("philosopher", philosopher);
 
-        if (philosopher2.equals(philosopher1)) {
-            throw new RuntimeException("Cannot attack self!!!");
-        }
 
         rival = getPhilosopher(philosopher2);
         model.addAttribute("rival", rival);
@@ -94,6 +91,13 @@ public class PhilosophyController {
         } else {
             philosopher.attack5(rival);
         }
+        if (philosopher2.equals(philosopher1)) {
+            throw new RuntimeException("Cannot attack self!!!");
+        }
+
+        rival = getPhilosopher(philosopher2);
+        model.addAttribute("rival", rival);
+
 
         if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && philosopher2.equals("Plato")) {
 
@@ -245,6 +249,7 @@ public class PhilosophyController {
             return "socratesAttacksPlato";
 
         }
+
         return "socratesAttacksPlato";
     }
 
