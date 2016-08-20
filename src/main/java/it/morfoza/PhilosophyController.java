@@ -22,6 +22,19 @@ public class PhilosophyController {
         this.philosopherRepository = philosopherRepository;
     }
 
+    @RequestMapping("/")
+    public String userInput() {
+        return "start";
+    }
+
+    @RequestMapping("/start")
+    public String start(@RequestParam(value = "userNick") String userNick,
+                        @RequestParam(value = "userPhilosopher") String userPhilosopher, Model model) {
+    model.addAttribute("userNick", userNick.toString());
+    model.addAttribute("userPhilosopher", userPhilosopher.toString());
+        return "forward:/map";
+    }
+
     @RequestMapping("/fight")
     public String selector() {
         return "philosophy";

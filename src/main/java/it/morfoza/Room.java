@@ -11,10 +11,12 @@ public class Room {
     int monsterCoordinateY = (int) (Math.random() * 10) / 2;
 
 
+
 //    List<PhysicalObjectInRoom> thingsInRoom;
 
     public static void main(String[] args) {
         Room room = new Room();
+        User user = new User();
 
         PlayerPosition playerPosition = room.getPlayerPosition();
         ObjectPosition objectPosition = room.getObjectPosition();

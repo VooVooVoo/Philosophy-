@@ -25,6 +25,8 @@
     </style>
 </head>
 <body>
+<p th:text="${userNick}" th:unless="${userNick == null}"></p>
+<p th:text="${userPhilosopher}" th:unless="${userPhilosopher == null}"></p>
 <div class="datagrid">
 
     <table align="center">
