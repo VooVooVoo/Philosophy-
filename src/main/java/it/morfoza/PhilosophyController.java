@@ -7,6 +7,7 @@ package it.morfoza;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -45,6 +46,12 @@ public class PhilosophyController {
     public String map(Model model) {
         model.addAttribute("map", room.getMap());
         return "Mapa";
+    }
+    @RequestMapping("/philosopherStatus")
+    public String philosopherStatus(@ModelAttribute(value="userPhilosopher")String userPhilosopher, Model model) {
+        model.addAttribute("userPhilosopher", userPhilosopher);
+
+        return "philosopherStatus";
     }
 
 
@@ -87,6 +94,9 @@ public class PhilosophyController {
         philosopher = getPhilosopher(philosopher1);
         model.addAttribute("philosopher", philosopher);
 
+        if (philosopher2.equals(philosopher1)) {
+            throw new RuntimeException("Cannot attack self!!!");
+        }
 
         rival = getPhilosopher(philosopher2);
         model.addAttribute("rival", rival);
@@ -104,12 +114,6 @@ public class PhilosophyController {
         } else {
             philosopher.attack5(rival);
         }
-        if (philosopher2.equals(philosopher1)) {
-            throw new RuntimeException("Cannot attack self!!!");
-        }
-
-        rival = getPhilosopher(philosopher2);
-        model.addAttribute("rival", rival);
 
 
         if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && philosopher2.equals("Plato")) {

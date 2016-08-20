@@ -67,5 +67,55 @@ public class Player implements Philosopher {
         return false;
     }
 
+    @Override
+    public void levelOne() {
+
+    }
+
+    @Override
+    public void levelTwo() {
+
+    }
+
+    @Override
+    public void levelThree() {
+
+    }
+
+    @Override
+    public void levelFour() {
+
+    }
+
+    @Override
+    public void levelFive() {
+
+    }
+
+    @Override
+    public void levelSix() {
+
+    }
+
+    @Override
+    public void levelSeven() {
+
+    }
+
+    @Override
+    public void levelEight() {
+
+    }
+
+    @Override
+    public void levelNine() {
+
+    }
+
+    @Override
+    public void levelTen() {
+
+    }
+
 
 }
