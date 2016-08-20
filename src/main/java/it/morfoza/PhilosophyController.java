@@ -48,8 +48,7 @@ public class PhilosophyController {
         return "Mapa";
     }
     @RequestMapping("/philosopherStatus")
-    public String philosopherStatus(@ModelAttribute(value="userPhilosopher")String userPhilosopher, Model model) {
-        model.addAttribute("userPhilosopher", userPhilosopher);
+    public String philosopherStatus() {
 
         return "philosopherStatus";
     }
