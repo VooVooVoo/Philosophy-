@@ -12,6 +12,7 @@ public abstract class PhilosopherBase {
     protected long wellBeing;
     protected long musclePower;
     protected boolean dumbfounded;
+    protected int level;
 
 
     public String toString() {return "Philosopher: " + name + " has " + health + " HP, his rhetorics level is " + rhetorics + " he is " + conceit + "% conceited, " + wellBeing + "% happy and his muscles look " + musclePower + "/100."; }

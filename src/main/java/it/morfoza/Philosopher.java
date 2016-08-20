@@ -29,6 +29,16 @@ public interface Philosopher {
 
     boolean isWell();
 
+void levelOne();
+    void levelTwo();
+    void levelThree();
+    void levelFour();
+    void levelFive();
+    void levelSix();
+    void levelSeven();
+    void levelEight();
+    void levelNine();
+    void levelTen();
 
 
 
