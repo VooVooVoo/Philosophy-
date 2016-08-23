@@ -12,6 +12,10 @@ import java.util.List;
 public class HardCodedPhilosopherRepository implements PhilosopherRepository {
     private List<Philosopher> philosophers = new ArrayList<>();
 
+
+
+
+
     public HardCodedPhilosopherRepository() {
         philosophers.add(new Aristotle());
         philosophers.add(new Plato());
@@ -21,7 +25,12 @@ public class HardCodedPhilosopherRepository implements PhilosopherRepository {
     @Override
     public Philosopher getByName(String philosopherName) {
 
-        return null;
+for(Philosopher philosopher:philosophers) {
+    if (philosopher.getName().equals(philosopherName)){
+        return philosopher;
+    }
+}
+        throw new RuntimeException();
     }
 
     @Override

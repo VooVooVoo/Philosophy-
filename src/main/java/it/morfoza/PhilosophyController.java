@@ -11,12 +11,16 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 
 @Controller
 public class PhilosophyController {
 
     private PhilosopherRepository philosopherRepository;
     private Room room = new Room();
+    private User user = new User();
 
     @Autowired
     public PhilosophyController(PhilosopherRepository philosopherRepository) {
@@ -24,16 +28,24 @@ public class PhilosophyController {
     }
 
     @RequestMapping("/")
-    public String userInput() {
+    public String userInput(@RequestParam(value = "error", required = false) String error, Model model) {
+        model.addAttribute("error", error);
+
         return "start";
     }
 
     @RequestMapping("/start")
     public String start(@RequestParam(value = "userNick") String userNick,
-                        @RequestParam(value = "userPhilosopher") String userPhilosopher, Model model) {
-    model.addAttribute("userNick", userNick.toString());
-    model.addAttribute("userPhilosopher", userPhilosopher.toString());
-        return "forward:/map";
+                        @RequestParam(value = "userPhilosopher") String userPhilosopher,
+                        Model model) {
+
+        if (userNickIsLongerThan12(userNick)) {
+            String error = encode("Your nick must not be longer than 12 characters!");
+            return "redirect:/?error=" + error;
+        }
+        model.addAttribute("userNick", userNick);
+        model.addAttribute("userPhilosopher", userPhilosopher);
+        return "redirect:/map";
     }
 
     @RequestMapping("/fight")
@@ -47,6 +59,7 @@ public class PhilosophyController {
         model.addAttribute("map", room.getMap());
         return "Mapa";
     }
+
     @RequestMapping("/philosopherStatus")
     public String philosopherStatus() {
 
@@ -272,6 +285,22 @@ public class PhilosophyController {
 
     private Philosopher getPhilosopher(String philosopher) {
         return philosopherRepository.getByName(philosopher);
+    }
+
+    public boolean userNickIsLongerThan12(String userNick) {
+        if (userNick.length() > 12) {
+            return true;
+        }
+
+return false;
+    }
+
+    private String encode(String text) {
+        try {
+            return URLEncoder.encode(text, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

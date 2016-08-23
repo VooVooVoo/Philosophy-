@@ -117,5 +117,10 @@ public class Player implements Philosopher {
 
     }
 
+    @Override
+    public String getName() {
+        return null;
+    }
+
 
 }

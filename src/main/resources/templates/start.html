@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html"  xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -14,7 +14,8 @@
     </style>
 </head>
 <body>
-<form action="/map">
+<h2 th:text="${error}" class="error"></h2>
+<form action="/start" method="post">
     Nick: <input type= "text" name="userNick"/>
 
     Philosopher <select name="userPhilosopher">

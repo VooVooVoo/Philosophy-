@@ -10,8 +10,8 @@ public class User {
     List<Philosopher> userPhilosopher;
     int userPhilosopherLevel;
 
-    public String toString() {return  userNick + userPhilosopher; }
-
-
+    public String toString() {
+        return userNick + userPhilosopher;
+    }
 
 }
