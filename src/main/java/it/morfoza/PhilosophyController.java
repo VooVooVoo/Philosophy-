@@ -49,7 +49,7 @@ public class PhilosophyController {
     }
 
     @RequestMapping("/fight")
-    public String selector() {
+    public String fight() {
         return "philosophy";
     }
 
@@ -83,26 +83,26 @@ public class PhilosophyController {
 
 
     @RequestMapping("/goRight")
-    public String goRight(Model model) {
-        model.addAttribute("map", room.goRight());
+    public String goRight() {
+        room.goRight();
         return "redirect:/map";
     }
 
     @RequestMapping("/goLeft")
-    public String goLeft(Model model) {
-        model.addAttribute("map", room.goLeft());
+    public String goLeft() {
+        room.goLeft();
         return "redirect:/map";
     }
 
     @RequestMapping("/goUp")
-    public String goUp(Model model) {
-        model.addAttribute("map", room.goUp());
+    public String goUp() {
+        room.goUp();
         return "redirect:/map";
     }
 
     @RequestMapping("/goDown")
-    public String goDown(Model model) {
-        model.addAttribute("map", room.goDown());
+    public String goDown() {
+        room.goDown();
         return "redirect:/map";
     }
 
@@ -122,7 +122,9 @@ public class PhilosophyController {
         model.addAttribute("philosopher", philosopher);
 
         if (philosopher2.equals(philosopher1)) {
-            throw new RuntimeException("Cannot attack self!!!");
+            //throw new RuntimeException("Cannot attack self!!!");
+
+        return "du[ps";
         }
 
         rival = getPhilosopher(philosopher2);

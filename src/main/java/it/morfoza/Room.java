@@ -11,8 +11,6 @@ public class Room {
     int monsterCoordinateY = (int) (Math.random() * 10) / 2;
 
 
-
-
 //    List<PhysicalObjectInRoom> thingsInRoom;
 
     public static void main(String[] args) {
@@ -41,32 +39,30 @@ public class Room {
     }
 
 
-    public int goLeft() {
+    public void goLeft() {
         if (playerCoordinateX > 0) {
-            return playerCoordinateX -= 1;
+            playerCoordinateX -= 1;
         }
-        return playerCoordinateX;
+
     }
 
-    public int goRight() {
+    public void goRight() {
         if (playerCoordinateX < 4) {
-            return playerCoordinateX += 1;
+            playerCoordinateX += 1;
         }
-        return playerCoordinateX;
     }
 
-    public int goDown() {
+    public void goDown() {
         if (playerCoordinateY < 4) {
             playerCoordinateY += 1;
         }
-        return playerCoordinateY;
     }
 
-    public int goUp() {
+    public void goUp() {
         if (playerCoordinateY > 0) {
             playerCoordinateY -= 1;
         }
-        return playerCoordinateY;
+
     }
 
 
