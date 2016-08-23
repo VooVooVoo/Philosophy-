@@ -65,6 +65,21 @@ public class PhilosophyController {
 
         return "philosopherStatus";
     }
+    @RequestMapping("/aristoAttacksPlato")
+    public String aristoAttacksPlato() {
+
+        return "aristoAttacksPlato";
+    }
+    @RequestMapping("/socratesAttacksAristotle")
+    public String socratesAttacksAristotle() {
+
+        return "socratesAttacksAristotle";
+    }
+    @RequestMapping("/socratesAttacksPlato")
+    public String socratesAttacksPlato() {
+
+        return "socratesAttacksPlato";
+    }
 
 
     @RequestMapping("/goRight")
@@ -130,156 +145,156 @@ public class PhilosophyController {
 
         if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && philosopher2.equals("Plato")) {
 
-            return "aristoAttacksPlato";
+            return "redirect:/aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("philosophise") && philosopher2.equals("Socrates")) {
 
-            return "socratesAttacksAristotle";
+            return "redirect:/socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("philosophise") && philosopher2.equals("Aristotle")) {
 
-            return "aristoAttacksPlato";
+            return "redirect:/aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("philosophise") && philosopher2.equals("Socrates")) {
 
-            return "socratesAttacksPlato";
+            return "redirect:/socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("philosophise") && philosopher2.equals("Aristotle")) {
 
-            return "socratesAttacksAristotle";
+            return "redirect:/socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("philosophise") && philosopher2.equals("Plato")) {
 
-            return "socratesAttacksPlato";
+            return "redirect:/socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("rhetorical attack") && philosopher2.equals("Plato")) {
 
-            return "aristoAttacksPlato";
+            return "redirect:/aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("rhetorical attack") && philosopher2.equals("Socrates")) {
 
-            return "socratesAttacksAristotle";
+            return "redirect:/socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("rhetorical attack") && philosopher2.equals("Aristotle")) {
 
-            return "aristoAttacksPlato";
+            return "redirect:/aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("rhetorical attack") && philosopher2.equals("Socrates")) {
 
-            return "socratesAttacksPlato";
+            return "redirect:/socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("rhetorical attack") && philosopher2.equals("Aristotle")) {
 
-            return "socratesAttacksAristotle";
+            return "redirect:/socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("rhetorical attack") && philosopher2.equals("Plato")) {
 
-            return "socratesAttacksPlato";
+            return "redirect:/socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("ad personam") && philosopher2.equals("Plato")) {
 
-            return "aristoAttacksPlato";
+            return "redirect:/aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("ad personam") && philosopher2.equals("Socrates")) {
 
-            return "socratesAttacksAristotle";
+            return "redirect:/socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("ad personam") && philosopher2.equals("Aristotle")) {
 
-            return "aristoAttacksPlato";
+            return "redirect:/aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("ad personam") && philosopher2.equals("Socrates")) {
 
-            return "socratesAttacksPlato";
+            return "redirect:/socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("ad personam") && philosopher2.equals("Aristotle")) {
 
-            return "socratesAttacksAristotle";
+            return "redirect:/socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("ad personam") && philosopher2.equals("Plato")) {
 
-            return "socratesAttacksPlato";
+            return "redirect:/socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("physical attack") && philosopher2.equals("Plato")) {
 
-            return "aristoAttacksPlato";
+            return "redirect:/aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("physical attack") && philosopher2.equals("Socrates")) {
 
-            return "socratesAttacksAristotle";
+            return "redirect:/socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("physical attack") && philosopher2.equals("Aristotle")) {
 
-            return "aristoAttacksPlato";
+            return "redirect:/aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("physical attack") && philosopher2.equals("Socrates")) {
 
-            return "socratesAttacksPlato";
+            return "redirect:/socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("physical attack") && philosopher2.equals("Aristotle")) {
 
-            return "socratesAttacksAristotle";
+            return "redirect:/socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("physical attack") && philosopher2.equals("Plato")) {
 
-            return "socratesAttacksPlato";
+            return "redirect:/socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("special") && philosopher2.equals("Plato")) {
 
-            return "aristoAttacksPlato";
+            return "redirect:/aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Aristotle") && attack.equals("special") && philosopher2.equals("Socrates")) {
 
-            return "socratesAttacksAristotle";
+            return "redirect:/socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("special") && philosopher2.equals("Aristotle")) {
 
-            return "aristoAttacksPlato";
+            return "redirect:/aristoAttacksPlato";
 
         }
         if (philosopher1.equals("Plato") && attack.equals("special") && philosopher2.equals("Socrates")) {
 
-            return "socratesAttacksPlato";
+            return "redirect:/socratesAttacksPlato";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("physical attack") && philosopher2.equals("Aristotle")) {
 
-            return "socratesAttacksAristotle";
+            return "redirect:/socratesAttacksAristotle";
 
         }
         if (philosopher1.equals("Socrates") && attack.equals("physical attack") && philosopher2.equals("Plato")) {
 
-            return "socratesAttacksPlato";
+            return "redirect:/socratesAttacksPlato";
 
         }
 
-        return "socratesAttacksPlato";
+        return "redirect:/socratesAttacksPlato";
     }
 
 

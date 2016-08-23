@@ -13,13 +13,12 @@ import static org.mockito.Mockito.when;
 public class PhilosophyControllerTest {
     @Test
             public void shouldReturnPhilosopherByName() {
+        //Given
         PhilosopherRepository philosopherRepository = mock(PhilosopherRepository.class);
-
-
-        PhilosophyController philosophyController = new PhilosophyController(philosopherRepository);
-
-        assertTrue(philosophyController.userNickIsLongerThan12("tertertertetetertetet"));
-        assertFalse(philosophyController.userNickIsLongerThan12("tert"));
+        PhilosophyController sut = new PhilosophyController(philosopherRepository);
+//When-Then
+        assertTrue(sut.userNickIsLongerThan12("tertertertetetertetet"));
+        assertFalse(sut.userNickIsLongerThan12("tert"));
 
     }
 
