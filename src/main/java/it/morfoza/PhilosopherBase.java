@@ -5,12 +5,12 @@ package it.morfoza;
  */
 public abstract class PhilosopherBase {
     protected String name;
-    protected long health;
-    protected long brainPower;
-    protected long rhetorics;
-    protected long conceit;
-    protected long wellBeing;
-    protected long musclePower;
+    protected int health;
+    protected int brainPower;
+    protected int rhetorics;
+    protected int conceit;
+    protected int wellBeing;
+    protected int musclePower;
     protected boolean dumbfounded;
     protected int level;
 

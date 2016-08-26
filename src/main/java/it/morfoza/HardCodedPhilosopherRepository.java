@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by Wojt on 2016-08-12.
  */
-@Component
+
 public class HardCodedPhilosopherRepository implements PhilosopherRepository {
     private List<Philosopher> philosophers = new ArrayList<>();
 
@@ -16,11 +16,11 @@ public class HardCodedPhilosopherRepository implements PhilosopherRepository {
 
 
 
-    public HardCodedPhilosopherRepository() {
-        philosophers.add(new Aristotle());
-        philosophers.add(new Plato());
-        philosophers.add(new Socrates());
-    }
+//    public HardCodedPhilosopherRepository() {
+//        philosophers.add(new Aristotle());
+//        philosophers.add(new Plato());
+//        philosophers.add(new Socrates());
+//    }
 
     @Override
     public Philosopher getByName(String philosopherName) {

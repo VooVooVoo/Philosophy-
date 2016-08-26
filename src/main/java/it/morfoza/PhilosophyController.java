@@ -53,7 +53,11 @@ public class PhilosophyController {
         return "philosophy";
     }
 
-
+@RequestMapping("/showAllPhilosophers")
+public String showAllPhilosophers(Model model){
+    model.addAttribute("show", philosopherRepository.getAllPhilosophers() );
+    return "showAllPhilosophers";
+}
     @RequestMapping("/map")
     public String map(Model model) {
         model.addAttribute("map", room.getMap());
@@ -344,6 +348,10 @@ public class PhilosophyController {
             return "redirect:/socratesAttacksPlato?philosopher1=Socrates&attack=special&philosopher2=Plato";
 
         }
+
+
+
+
 
         return "redirect:/socratesAttacksPlato";
     }
