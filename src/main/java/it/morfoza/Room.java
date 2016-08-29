@@ -13,7 +13,7 @@ public class Room {
 
 //    List<PhysicalObjectInRoom> thingsInRoom;
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         Room room = new Room();
         User user = new User();
 
