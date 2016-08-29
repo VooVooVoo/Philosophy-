@@ -14,11 +14,11 @@ public class PhilosopherRowMapper implements RowMapper<Philosopher> {
     public Philosopher mapRow(ResultSet resultSet, int i) throws SQLException {
         String name = resultSet.getString("name");
         int health = resultSet.getInt("health");
-        int brainPower = resultSet.getInt("brainPower");
+        int brainPower = resultSet.getInt("brainpower");
         int conceit = resultSet.getInt("conceit");
         int rhetorics = resultSet.getInt("rhetorics");
-        int wellBeing = resultSet.getInt("wellBeing");
-        int musclePower = resultSet.getInt("musclePower");
+        int wellBeing = resultSet.getInt("wellbeing");
+        int musclePower = resultSet.getInt("musclepower");
         boolean dumbfounded = resultSet.getBoolean("dumbfounded");
         int level = resultSet.getInt("level");
 

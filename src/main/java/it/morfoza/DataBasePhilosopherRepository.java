@@ -23,13 +23,13 @@ public class DataBasePhilosopherRepository implements PhilosopherRepository {
     public Philosopher getByName(String philosopherName) {
 
 
-                return jdbcTemplate.queryForObject("SELECT name, health, rhetorics, brainPower, conceit, wellBeing, musclePower, dumbfounded, level FROM philosophy WHERE name = ?", new PhilosopherRowMapper(),philosopherName );
+                return jdbcTemplate.queryForObject("SELECT name, health, rhetorics, brainpower, conceit, wellbeing, musclepower, dumbfounded, level FROM philosophy WHERE name = ?", new PhilosopherRowMapper(),philosopherName );
             }
 
 
 
     @Override
     public List<Philosopher> getAllPhilosophers() {
-        return jdbcTemplate.query("SELECT name, health, rhetorics, brainPower, conceit, wellBeing, musclePower, dumbfounded, level FROM philosophy", new PhilosopherRowMapper() );
+        return jdbcTemplate.query("SELECT name, health, rhetorics, brainpower, conceit, wellbeing, musclepower, dumbfounded, level FROM philosophy", new PhilosopherRowMapper() );
     }
 }
